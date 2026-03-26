@@ -1,0 +1,29 @@
+<nav class="opl-site-nav">
+  <a href="{{ routes.root_url }}" class="opl-site-nav__brand">OLYMPUS PERFORMANCE LABS</a>
+  <div class="opl-site-nav__menu">
+    <a href="https://olympusperformancelabs.com/products/nectar-of-the-gods-preworkout">Shop</a>
+    <a href="/pages/about">About</a>
+    <a href="/pages/contact">Contact</a>
+    <a href="{{ routes.cart_url }}" class="opl-site-nav__cart">
+      Cart
+      <span class="opl-site-nav__cart-count">{{ cart.item_count }}</span>
+    </a>
+  </div>
+</nav>
+
+<section class="opl-simple-page page-width">
+  <h1>{{ page.title }}</h1>
+  {% if page.content != blank %}
+    <div class="rte">{{ page.content }}</div>
+  {% else %}
+    <p>Olympus Performance Labs builds premium performance supplements designed for athletes who value discipline, performance, and transparency.</p>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "OPL Simple Page",
+  "settings": [],
+  "presets": [{ "name": "OPL Simple Page" }]
+}
+{% endschema %}

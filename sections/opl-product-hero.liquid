@@ -1,0 +1,68 @@
+<!-- Sticky site nav -->
+<nav class="opl-site-nav">
+  <a href="{{ routes.root_url }}" class="opl-site-nav__brand">OLYMPUS PERFORMANCE LABS</a>
+  <div class="opl-site-nav__menu">
+    <a href="https://olympusperformancelabs.com/products/nectar-of-the-gods-preworkout">Shop</a>
+    <a href="/pages/about">About</a>
+    <a href="/pages/contact">Contact</a>
+    <a href="{{ routes.cart_url }}" class="opl-site-nav__cart">
+      Cart
+      <span class="opl-site-nav__cart-count">{{ cart.item_count }}</span>
+    </a>
+  </div>
+</nav>
+
+<section class="opl-product-hero page-width">
+  <div class="opl-product-hero__grid">
+
+    <!-- Left: product image -->
+    <div class="opl-product-hero__left">
+      {% if product.featured_image %}
+        {{ product.featured_image | image_url: width: 900 | image_tag: class: 'opl-product-hero__image', alt: product.title }}
+      {% else %}
+        <img class="opl-product-hero__image"
+             src="{{ 'nectar-tub-approved.png' | asset_url }}"
+             alt="Nectar of the Gods Pre-Workout"
+             width="520" height="650">
+      {% endif %}
+    </div>
+
+    <!-- Right: product details -->
+    <div class="opl-product-hero__right">
+      <div class="opl-product-hero__eyebrow">NECTAR OF THE GODS</div>
+      <h1 class="opl-product-hero__title">{{ product.title | default: 'Nectar of the Gods' }}</h1>
+      <div class="opl-product-hero__subtitle">Pre-Workout</div>
+      <div class="opl-product-hero__flavor">Blue Raspberry</div>
+
+      <p class="opl-product-hero__description">
+        Researched back pre-workout to support energy, focus, and training performance.
+      </p>
+
+      <div class="opl-product-hero__price">{{ product.price | money }}</div>
+
+      <div class="opl-product-hero__offer">
+        <strong>FIRST 100 PRE-ORDERS</strong><br>
+        SAVE 20% AUTOMATICALLY AT CHECKOUT
+      </div>
+
+      <div class="opl-product-hero__meta">Estimated Shipping: TBD</div>
+      <div class="opl-product-hero__meta">30 servings per container</div>
+
+      {% form 'product', product, class: 'opl-product-form' %}
+        <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+        <button type="submit" class="opl-product-hero__button">
+          PRE-ORDER NOW
+        </button>
+      {% endform %}
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "OPL Product Hero",
+  "settings": [],
+  "presets": [{ "name": "OPL Product Hero" }]
+}
+{% endschema %}

@@ -1,0 +1,51 @@
+<div style="min-height:60vh;padding:80px 36px;max-width:860px;margin:0 auto;font-family:Georgia,serif;">
+
+  <nav class="opl-site-nav">
+    <a href="{{ routes.root_url }}" class="opl-site-nav__brand">OLYMPUS PERFORMANCE LABS</a>
+    <div class="opl-site-nav__menu">
+      <a href="/products/nectar-of-the-gods-preworkout">Shop</a>
+      <a href="/pages/about">About</a>
+      <a href="/pages/contact">Contact</a>
+    </div>
+  </nav>
+
+  <h1 style="font-size:42px;margin:48px 0 32px;font-weight:400;">Your Cart</h1>
+
+  {% if cart.items.size > 0 %}
+    <form action="{{ routes.cart_url }}" method="post">
+      {% for item in cart.items %}
+        <div style="display:grid;grid-template-columns:80px 1fr auto;gap:20px;align-items:center;padding:20px 0;border-bottom:1px solid #ddd;">
+          {% if item.image %}
+            <img src="{{ item.image | img_url: '160x160' }}" alt="{{ item.title }}" style="width:80px;height:80px;object-fit:contain;border:1px solid #e5ddd0;">
+          {% else %}
+            <div style="width:80px;height:80px;background:#f0ece4;border:1px solid #e5ddd0;"></div>
+          {% endif %}
+          <div>
+            <div style="font-size:18px;margin-bottom:6px;">{{ item.product.title }}</div>
+            {% unless item.variant.title == 'Default Title' %}
+              <div style="font-size:14px;color:#b8923a;margin-bottom:10px;">{{ item.variant.title }}</div>
+            {% endunless %}
+            <div style="display:flex;align-items:center;gap:12px;">
+              <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity={{ item.quantity | minus: 1 }}" style="width:28px;height:28px;border:1px solid #ddd;display:flex;align-items:center;justify-content:center;color:#333;text-decoration:none;font-size:18px;">−</a>
+              <span style="font-size:16px;">{{ item.quantity }}</span>
+              <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity={{ item.quantity | plus: 1 }}" style="width:28px;height:28px;border:1px solid #ddd;display:flex;align-items:center;justify-content:center;color:#333;text-decoration:none;font-size:18px;">+</a>
+            </div>
+          </div>
+          <div style="font-size:20px;font-weight:600;">{{ item.line_price | money }}</div>
+        </div>
+      {% endfor %}
+
+      <div style="text-align:right;margin-top:32px;">
+        <div style="font-size:22px;margin-bottom:20px;">Total: <strong>{{ cart.total_price | money }}</strong></div>
+        <button type="submit" name="checkout" style="background:#111;color:#fff;border:none;padding:18px 48px;font-family:Georgia,serif;font-size:18px;letter-spacing:0.1em;cursor:pointer;">
+          PROCEED TO CHECKOUT
+        </button>
+      </div>
+    </form>
+  {% else %}
+    <p style="font-size:20px;color:#666;margin-bottom:32px;">Your cart is empty.</p>
+    <a href="/products/nectar-of-the-gods-preworkout" style="display:inline-block;padding:16px 44px;border:1px solid #b8923a;color:#b8923a;font-family:Georgia,serif;font-size:16px;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;">
+      SHOP NOW
+    </a>
+  {% endif %}
+</div>

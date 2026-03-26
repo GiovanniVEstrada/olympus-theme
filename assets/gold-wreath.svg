@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="400" height="320">
+  <defs>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8c96a;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#c9a03a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8a6520;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="leafGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0d878;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#d4a840;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9a7228;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="stemGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c9a03a" />
+      <stop offset="100%" style="stop-color:#e8c96a" />
+    </linearGradient>
+  </defs>
+
+  <!-- ═══ LEFT BRANCH ═══ -->
+  <!-- Main stem curve left -->
+  <path d="M200 260 C170 240 140 210 115 175 C95 148 80 118 72 85" 
+        fill="none" stroke="url(#stemGrad)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Left branch — leaf pairs from bottom to top -->
+  <!-- Pair 1 — bottom -->
+  <ellipse cx="178" cy="248" rx="18" ry="8" transform="rotate(-30 178 248)" fill="url(#leafGrad)"/>
+  <ellipse cx="178" cy="248" rx="8" ry="3" transform="rotate(-30 178 248)" fill="rgba(255,220,100,0.3)"/>
+  <ellipse cx="162" cy="252" rx="16" ry="7" transform="rotate(-50 162 252)" fill="url(#leafGrad2)"/>
+
+  <!-- Pair 2 -->
+  <ellipse cx="163" cy="232" rx="19" ry="8" transform="rotate(-38 163 232)" fill="url(#leafGrad)"/>
+  <ellipse cx="163" cy="232" rx="9" ry="3.5" transform="rotate(-38 163 232)" fill="rgba(255,220,100,0.3)"/>
+  <ellipse cx="147" cy="237" rx="17" ry="7" transform="rotate(-58 147 237)" fill="url(#leafGrad2)"/>
+
+  <!-- Pair 3 -->
+  <ellipse cx="148" cy="213" rx="20" ry="8.5" transform="rotate(-46 148 213)" fill="url(#leafGrad)"/>
+  <ellipse cx="148" cy="213" rx="9" ry="3.5" transform="rotate(-46 148 213)" fill="rgba(255,220,100,0.3)"/>
+  <ellipse cx="131" cy="219" rx="17" ry="7" transform="rotate(-66 131 219)" fill="url(#leafGrad2)"/>
+
+  <!-- Pair 4 -->
+  <ellipse cx="135" cy="193" rx="20" ry="8.5" transform="rotate(-54 135 193)" fill="url(#leafGrad)"/>
+  <ellipse cx="135" cy="193" rx="9" ry="3.5" transform="rotate(-54 135 193)" fill="rgba(255,220,100,0.3)"/>
+  <ellipse cx="117" cy="200" rx="18" ry="7.5" transform="rotate(-74 117 200)" fill="url(#leafGrad2)"/>
+
+  <!-- Pair 5 -->
+  <ellipse cx="122" cy="172" rx="20" ry="8" transform="rotate(-62 122 172)" fill="url(#leafGrad)"/>
+  <ellipse cx="122" cy="172" rx="9" ry="3.5" transform="rotate(-62 122 172)" fill="rgba(255,220,100,0.3)"/>
+  <ellipse cx="104" cy="179" rx="18" ry="7.5" transform="rotate(-80 104 179)" fill="url(#leafGrad2)"/>
+
+  <!-- Pair 6 -->
+  <ellipse cx="111" cy="151" rx="19" ry="8" transform="rotate(-70 111 151)" fill="url(#leafGrad)"/>
+  <ellipse cx="111" cy="151" rx="8.5" ry="3" transform="rotate(-70 111 151)" fill="rgba(255,220,100,0.3)"/>
+  <ellipse cx="94" cy="158" rx="17" ry="7" transform="rotate(-88 94 158)" fill="url(#leafGrad2)"/>
+
+  <!-- Pair 7 -->
+  <ellipse cx="101" cy="130" rx="19" ry="7.5" transform="rotate(-78 101 130)" fill="url(#leafGrad)"/>
+  <ellipse cx="101" cy="130" rx="8.5" ry="3" transform="rotate(-78 101 130)" fill="rgba(255,220,100,0.3)"/>
+  <ellipse cx="85" cy="136" rx="17" ry="6.5" transform="rotate(-96 85 136)" fill="url(#leafGrad2)"/>
+
+  <!-- Pair 8 -->
+  <ellipse cx="93" cy="109" rx="18" ry="7.5" transform="rotate(-86 93 109)" fill="url(#leafGrad)"/>
+  <ellipse cx="93" cy="109" rx="8" ry="3" transform="rotate(-86 93 109)" fill="rgba(255,220,100,0.3)"/>
+  <ellipse cx="78" cy="114" rx="16" ry="6.5" transform="rotate(-104 78 114)" fill="url(#leafGrad2)"/>
+
+  <!-- Pair 9 — top left -->
+  <ellipse cx="86" cy="89" rx="17" ry="7" transform="rotate(-94 86 89)" fill="url(#leafGrad)"/>
+  <ellipse cx="75" cy="93" rx="15" ry="6" transform="rotate(-112 75 93)" fill="url(#leafGrad2)"/>
+
+  <!-- ═══ RIGHT BRANCH (mirror) ═══ -->
+  <!-- Main stem curve right -->
+  <path d="M200 260 C230 240 260 210 285 175 C305 148 320 118 328 85"
+        fill="none" stroke="url(#stemGrad)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Right branch — leaf pairs (mirrored) -->
+  <!-- Pair 1 -->
+  <ellipse cx="222" cy="248" rx="18" ry="8" transform="rotate(30 222 248)" fill="url(#leafGrad)"/>
+  <ellipse cx="222" cy="248" rx="8" ry="3" transform="rotate(30 222 248)" fill="rgba(255,220,100,0.3)"/>
+  <ellipse cx="238" cy="252" rx="16" ry="7" transform="rotate(50 238 252)" fill="url(#leafGrad2)"/>
+
+  <!-- Pair 2 -->
+  <ellipse cx="237" cy="232" rx="19" ry="8" transform="rotate(38 237 232)" fill="url(#leafGrad)"/>
+  <ellipse cx="237" cy="232" rx="9" ry="3.5" transform="rotate(38 237 232)" fill="rgba(255,220,100,0.3)"/>
+  <ellipse cx="253" cy="237" rx="17" ry="7" transform="rotate(58 253 237)" fill="url(#leafGrad2)"/>
+
+  <!-- Pair 3 -->
+  <ellipse cx="252" cy="213" rx="20" ry="8.5" transform="rotate(46 252 213)" fill="url(#leafGrad)"/>
+  <ellipse cx="252" cy="213" rx="9" ry="3.5" transform="rotate(46 252 213)" fill="rgba(255,220,100,0.3)"/>
+  <ellipse cx="269" cy="219" rx="17" ry="7" transform="rotate(66 269 219)" fill="url(#leafGrad2)"/>
+
+  <!-- Pair 4 -->
+  <ellipse cx="265" cy="193" rx="20" ry="8.5" transform="rotate(54 265 193)" fill="url(#leafGrad)"/>
+  <ellipse cx="265" cy="193" rx="9" ry="3.5" transform="rotate(54 265 193)" fill="rgba(255,220,100,0.3)"/>
+  <ellipse cx="283" cy="200" rx="18" ry="7.5" transform="rotate(74 283 200)" fill="url(#leafGrad2)"/>
+
+  <!-- Pair 5 -->
+  <ellipse cx="278" cy="172" rx="20" ry="8" transform="rotate(62 278 172)" fill="url(#leafGrad)"/>
+  <ellipse cx="278" cy="172" rx="9" ry="3.5" transform="rotate(62 278 172)" fill="rgba(255,220,100,0.3)"/>
+  <ellipse cx="296" cy="179" rx="18" ry="7.5" transform="rotate(80 296 179)" fill="url(#leafGrad2)"/>
+
+  <!-- Pair 6 -->
+  <ellipse cx="289" cy="151" rx="19" ry="8" transform="rotate(70 289 151)" fill="url(#leafGrad)"/>
+  <ellipse cx="289" cy="151" rx="8.5" ry="3" transform="rotate(70 289 151)" fill="rgba(255,220,100,0.3)"/>
+  <ellipse cx="306" cy="158" rx="17" ry="7" transform="rotate(88 306 158)" fill="url(#leafGrad2)"/>
+
+  <!-- Pair 7 -->
+  <ellipse cx="299" cy="130" rx="19" ry="7.5" transform="rotate(78 299 130)" fill="url(#leafGrad)"/>
+  <ellipse cx="299" cy="130" rx="8.5" ry="3" transform="rotate(78 299 130)" fill="rgba(255,220,100,0.3)"/>
+  <ellipse cx="315" cy="136" rx="17" ry="6.5" transform="rotate(96 315 136)" fill="url(#leafGrad2)"/>
+
+  <!-- Pair 8 -->
+  <ellipse cx="307" cy="109" rx="18" ry="7.5" transform="rotate(86 307 109)" fill="url(#leafGrad)"/>
+  <ellipse cx="307" cy="109" rx="8" ry="3" transform="rotate(86 307 109)" fill="rgba(255,220,100,0.3)"/>
+  <ellipse cx="322" cy="114" rx="16" ry="6.5" transform="rotate(104 322 114)" fill="url(#leafGrad2)"/>
+
+  <!-- Pair 9 — top right -->
+  <ellipse cx="314" cy="89" rx="17" ry="7" transform="rotate(94 314 89)" fill="url(#leafGrad)"/>
+  <ellipse cx="325" cy="93" rx="15" ry="6" transform="rotate(112 325 93)" fill="url(#leafGrad2)"/>
+
+  <!-- ═══ BOTTOM TIE / BOW ═══ -->
+  <path d="M188 270 C192 278 196 283 200 286 C204 283 208 278 212 270" 
+        fill="none" stroke="#c9a03a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M188 270 C182 265 174 264 168 268" 
+        fill="none" stroke="#c9a03a" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M212 270 C218 265 226 264 232 268" 
+        fill="none" stroke="#c9a03a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Bow leaves -->
+  <ellipse cx="178" cy="270" rx="14" ry="5.5" transform="rotate(-20 178 270)" fill="url(#leafGrad)"/>
+  <ellipse cx="222" cy="270" rx="14" ry="5.5" transform="rotate(20 222 270)" fill="url(#leafGrad)"/>
+  <circle cx="200" cy="272" r="5" fill="#d4a840"/>
+  <circle cx="200" cy="272" r="2.5" fill="#f0d060"/>
+</svg>

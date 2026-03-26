@@ -1,0 +1,65 @@
+<section class="opl-home-hero" id="opl-home-hero">
+
+  <!-- Background -->
+  <div class="opl-home-hero__bg"style="background-image: url('{{ "hero-statue1.png" | asset_url }}');"></div>
+
+  <!-- Nav Bar -->
+  <header class="opl-nav">
+    <div class="opl-nav__brand">OLYMPUS PERFORMANCE LABS</div>
+
+    <nav class="opl-nav__menu" aria-label="Primary">
+      <a href="/products/nectar-of-the-gods-preworkout">Shop</a>
+      <a href="/pages/about">About</a>
+      <a href="/pages/contact">Contact</a>
+      <a href="{{ routes.cart_url }}" class="opl-site-nav__cart">
+      Cart
+      <span class="opl-site-nav__cart-count">{{ cart.item_count }}</span>
+    </a>
+    </nav>
+  </header>
+
+  <!-- Content -->
+  <div class="opl-home-hero__content page-width">
+
+    <div class="opl-home-hero__text">
+
+      <div class="opl-hero__laurel">✦ ✦</div>
+
+      <p class="opl-hero__brand">
+        OLYMPUS PERFORMANCE LABS
+      </p>
+
+      <h1 class="opl-hero__headline">
+        ASCENSION IS A CHOICE.
+      </h1>
+
+      <p class="opl-hero__sub">
+        NECTAR OF THE GODS · PRE-WORKOUT
+      </p>
+
+
+
+      <a 
+        class="opl-home-hero__button"
+        href="/products/nectar-of-the-gods-preworkout"
+      >
+        SHOP PRE-WORKOUT
+      </a>
+
+    </div>
+
+    
+    
+
+  </div>
+
+</section>
+
+
+{% schema %}
+{
+  "name": "OPL Home Hero",
+  "settings": [],
+  "presets": [{ "name": "OPL Home Hero" }]
+}
+{% endschema %}
