@@ -1,0 +1,25 @@
+<nav class="opl-site-nav">
+  <a href="{{ routes.root_url }}" class="opl-site-nav__brand">
+    OLYMPUS PERFORMANCE LABS
+  </a>
+
+  <div class="opl-site-nav__menu">
+    <a href="/products/nectar-of-the-gods-preworkout">Shop</a>
+    <a href="/pages/about">About</a>
+    <a href="/pages/contact">Contact</a>
+    <a href="/sections/opl-simple-page.liquid">simple</a>
+
+
+    <a href="{{ routes.cart_url }}" class="opl-site-nav__cart">
+      <span>Cart</span>
+      <span class="opl-site-nav__cart-count">{{ cart.item_count }}</span>
+    </a>
+  </div>
+</nav>
+
+{% schema %}
+{
+  "name": "OPL Header",
+  "settings": []
+}
+{% endschema %}
